@@ -1,0 +1,17 @@
+class Solution:
+    def twoSum(self,nums,target):
+        sol_found=False
+        i=0
+        sol_List=[]
+        while not sol_found and i<len(nums):
+            j=i+1
+            while j<len(nums) and not sol_found:
+                if nums[i]+nums[j]==target:
+                    sol_found=True
+                    sol_List.append(i)
+                    sol_List.append(j)
+                j+=1
+            i+=1
+        return sol_List
+Solution().twoSum([2,7,11,15],9)
+        
